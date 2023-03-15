@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.2926980198019801" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1080.0" style="-fx-background-color: #efefe9;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.PropertyReturningController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TextArea fx:id="infoBoard" editable="false" layoutX="67.0" layoutY="123.0" prefHeight="200.0" prefWidth="200.0" promptText="Information Board" />
+            <Button fx:id="returnbtn" layoutX="118.0" layoutY="430.0" mnemonicParsing="false" onAction="#returnListener" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #BDD4BB; -fx-background-radius: 8;" text="Return">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font></Button>
+            <Button fx:id="backBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backListener" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #BDD4BB; -fx-background-radius: 8;" text="Back">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font></Button>
+            <Label alignment="CENTER" layoutX="57.0" layoutY="67.0" prefHeight="32.0" prefWidth="219.0" text="Return Property">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font></Label>
+            <TextField fx:id="damagesTxt" layoutX="93.0" layoutY="369.0" />
+            <Label layoutX="7.0" layoutY="365.0" prefHeight="25.0" prefWidth="75.0" text="Damages £">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="491.0">
+         <children>
+            <TableView fx:id="table" layoutX="58.0" layoutY="93.0" prefHeight="390.0" prefWidth="409.0" style="-fx-background-color: #efefe9;">
+              <columns>
+                <TableColumn fx:id="pcode" prefWidth="116.0" text="POSTCODE" />
+                  <TableColumn fx:id="custID" prefWidth="124.66665649414062" text="CUSTOMER ID" />
+                  <TableColumn fx:id="custName" prefWidth="168.00006103515625" text="CUSTOMER NAME" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="58.0" layoutY="11.0" prefHeight="32.0" prefWidth="375.0" text="RENTED PROPERTIES">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="13.0" />
+               </font></Label>
+            <Pane layoutX="467.0" layoutY="8.0" prefHeight="481.0" prefWidth="289.0">
+               <children>
+                  <Label layoutX="7.0" layoutY="232.0" prefHeight="18.0" prefWidth="97.0" text="New Return Date">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font></Label>
+                  <DatePicker fx:id="newdate" editable="false" layoutX="105.0" layoutY="229.0" />
+                  <Button fx:id="renew" layoutX="88.0" layoutY="288.0" mnemonicParsing="false" onAction="#renewListener" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" text="Renew">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Button>
+                  <Label layoutX="95.0" layoutY="177.0" prefHeight="27.0" prefWidth="115.0" text="Renew Rental">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <ComboBox fx:id="combo" layoutX="66.0" layoutY="58.0" prefWidth="150.0" promptText="Search by" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" />
+            <TextField fx:id="searchTxt" layoutX="246.0" layoutY="58.0" style="-fx-background-radius: 8;" />
+            <Button fx:id="searchBtn" layoutX="407.0" layoutY="58.0" mnemonicParsing="false" onAction="#searchBtnListener" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" text="Search">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font></Button>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1080.0" style="-fx-background-color: #efefe9;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.PropertyRentingController">
+   <children>
+      <Label layoutX="429.0" layoutY="15.0" prefHeight="25.0" prefWidth="183.0" text="Property information">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="270.0" layoutY="82.0" prefHeight="373.0" prefWidth="488.0" style="-fx-background-color: #efefe9;">
+        <columns>
+          <TableColumn fx:id="ldate" prefWidth="75.0" text="LIST DATE" />
+          <TableColumn fx:id="pcode" prefWidth="75.0" text="POSTCODE" />
+            <TableColumn fx:id="beds" prefWidth="75.0" text="BEDS" />
+            <TableColumn fx:id="baths" prefWidth="75.0" text="BATHS" />
+            <TableColumn fx:id="size" prefWidth="88.66668701171875" text="SIZE" />
+            <TableColumn fx:id="rent" prefWidth="95.99993896484375" text="RENT (PCM)" />
+        </columns>
+      </TableView>
+      <Pane layoutX="796.0" prefHeight="492.0" prefWidth="279.0">
+         <children>
+            <TextArea fx:id="infoBoard" editable="false" layoutX="14.0" layoutY="46.0" prefHeight="252.0" prefWidth="252.0" promptText="Information Board">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></TextArea>
+            <Label alignment="CENTER" layoutX="60.0" layoutY="14.0" prefHeight="32.0" prefWidth="139.0" text="Rent A property">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="renter" layoutX="77.0" layoutY="406.0" mnemonicParsing="false" onAction="#renterListener" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" text="Rent">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+            <Label layoutX="10.0" layoutY="326.0" prefHeight="17.0" prefWidth="82.0" text="CustomerID">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="359.0" prefHeight="17.0" prefWidth="82.0" text="Return Date">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <TextField fx:id="custID" layoutX="88.0" layoutY="322.0" prefHeight="25.0" prefWidth="161.0" />
+            <DatePicker fx:id="expectedReturn" editable="false" layoutX="88.0" layoutY="355.0" prefHeight="25.0" prefWidth="167.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="4.0" layoutY="3.0" prefHeight="492.0" prefWidth="267.0">
+         <children>
+            <Label alignment="CENTER" layoutX="85.0" layoutY="25.0" prefHeight="17.0" prefWidth="139.0" text="Add New Property">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font></Label>
+            <Button fx:id="back" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#backListener" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" text="Back">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+            <Label layoutX="7.0" layoutY="57.0" prefHeight="17.0" prefWidth="67.0" text="Postcode">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="7.0" layoutY="88.0" prefHeight="17.0" prefWidth="67.0" text="Beds">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="7.0" layoutY="121.0" prefHeight="17.0" prefWidth="67.0" text="Baths">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="7.0" layoutY="151.0" prefHeight="17.0" prefWidth="58.0" text="Size">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="7.0" layoutY="181.0" prefHeight="17.0" prefWidth="67.0" text="Latitude">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="4.0" layoutY="213.0" prefHeight="17.0" prefWidth="74.0" text="Longitude">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="4.0" layoutY="247.0" prefHeight="17.0" prefWidth="67.0" text="Type">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="3.0" layoutY="277.0" prefHeight="17.0" prefWidth="67.0" text="Garden y/n">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <Label layoutX="4.0" layoutY="309.0" prefHeight="17.0" prefWidth="67.0" text="Rent £">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Label>
+            <TextField fx:id="pcodee" layoutX="76.0" layoutY="53.0" prefHeight="17.0" prefWidth="149.0" style="-fx-background-radius: 8;" />
+            <TextField fx:id="bedsss" layoutX="76.0" layoutY="84.0" style="-fx-background-radius: 8;" />
+            <TextField fx:id="bathsss" layoutX="76.0" layoutY="117.0" style="-fx-background-radius: 8;" />
+            <TextField fx:id="sizeee" layoutX="76.0" layoutY="147.0" style="-fx-background-radius: 8;" />
+            <TextField fx:id="lattt" layoutX="76.0" layoutY="177.0" style="-fx-background-radius: 8;" />
+            <TextField fx:id="longgg" layoutX="75.0" layoutY="209.0" style="-fx-background-radius: 8;" />
+            <TextField fx:id="typeee" layoutX="75.0" layoutY="243.0" style="-fx-background-radius: 8;" />
+            <TextField fx:id="gardennn" layoutX="76.0" layoutY="273.0" style="-fx-background-radius: 8;" />
+            <TextField fx:id="rentttt" layoutX="76.0" layoutY="305.0" style="-fx-background-radius: 8;" />
+            <Button fx:id="addP" layoutX="106.0" layoutY="386.0" mnemonicParsing="false" onAction="#addPListener" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" text="ADD">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <ComboBox fx:id="combo" layoutX="297.0" layoutY="46.0" prefWidth="150.0" promptText="Search by" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" />
+      <TextField fx:id="searchText" layoutX="484.0" layoutY="46.0" style="-fx-background-radius: 8;" />
+      <Button fx:id="searchBtn" layoutX="649.0" layoutY="46.0" mnemonicParsing="false" onAction="#searchBtnListener" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" text="Search">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Button>
+      <Button fx:id="delete" layoutX="662.0" layoutY="464.0" mnemonicParsing="false" onAction="#deleteListener" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #bdd4bb; -fx-background-radius: 8;" text="Delete">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
