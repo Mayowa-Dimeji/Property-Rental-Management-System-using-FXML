@@ -222,16 +222,20 @@ public class PropertyRentingController {
 
 			try {
 				//validation for parsing inputs
+				System.out.println(0);
 				Property newproperty=new Property(LocalDate.now(), Integer.parseInt(bedsss.getText()),Integer.parseInt(bathsss.getText()), 
 						Double.parseDouble(rentttt.getText()), Integer.parseInt(sizeee.getText()), pcodee.getText(), Double.parseDouble(lattt.getText()), Double.parseDouble(longgg.getText()), typeee.getText(), gardennn.getText(), false);
+				System.out.println("property parsed");
 				p.addProperty(newproperty);
 				table.getItems().add(newproperty);
 				infoBoard.clear();
 				infoBoard.setText("Property Added");
+				System.out.println(1);
 
 
 				try {
 					DataHandle.writeToFile(p);
+					System.out.println("l");
 				} catch (IOException e) {
 					// TODO handle IOexception
 					e.printStackTrace();

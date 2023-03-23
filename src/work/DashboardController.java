@@ -67,17 +67,31 @@ public class DashboardController {
 
 	@FXML
 	public void CustomerListener(ActionEvent event) throws IOException {
-		Parent parent = FXMLLoader.load(
-				getClass().getResource("CustomerList.fxml")); 
+		
+//		to change scene to new scene
+		//		Parent parent = FXMLLoader.load(
+		//				getClass().getResource("CustomerList.fxml")); 
+		//
+		//		// Build the scene graph.
+		//		Scene scene = new Scene(parent); 
+		//
+		//		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		//		// Display our window, using the scene graph.
+		//		stage.setTitle("Next Page"); 
+		//		stage.setScene(scene);
+		//		stage.show(); 
+		
+//		to pop a new window 
 
-		// Build the scene graph.
-		Scene scene = new Scene(parent); 
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("CustomerList.fxml"));
+		Parent secondRoot = loader.load();
+		Scene secondScene = new Scene(secondRoot);
 
-		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		// Display our window, using the scene graph.
-		stage.setTitle("Next Page"); 
-		stage.setScene(scene);
-		stage.show(); 
+		// Create a new stage for the second scene
+		Stage secondStage = new Stage();
+		secondStage.setScene(secondScene);
+		secondStage.show();
+
 
 	}
 
